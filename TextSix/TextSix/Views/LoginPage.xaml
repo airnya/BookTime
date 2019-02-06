@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TextSix.Views.LoginPage"
+             BackgroundColor="PaleVioletRed">
+    <ContentPage.Content>
+        <StackLayout Padding="45">
+
+            <Label x:Name="ApplicationTitle" Text="LOGIN" HorizontalOptions="Center" TextColor="White"/>
+            <Label x:Name="HelloMessage" Text="Здоров, чо как мужик?" TextColor="White" FontSize="40" VerticalTextAlignment="End"/>
+
+
+            <StackLayout VerticalOptions="CenterAndExpand" Padding="5">
+
+                <Label x:Name="Lbl_Username" Text="Email" FontSize="10" TextColor="White"/>
+                <Entry x:Name="Entry_Username" Placeholder="Username" TextColor="White" Text="" />
+                <Label x:Name="Lbl_Password" Text="Password" TextColor="White"/>
+                <Entry x:Name="Entry_Password" Placeholder="Password" TextColor="White" Text=""/>
+                <Button x:Name="Btn_SignIn" Text="LOG IN" TextColor="PaleVioletRed" Clicked="SignInProcedure" BackgroundColor="White" />
+
+
+
+                <StackLayout Padding="5" Orientation="Horizontal" HorizontalOptions="Center">
+                    <Label x:Name="Lbl_Forgot_Password" Text="FORGOT PASSWORD?"  FontSize="10" TextColor="White" />
+                    <Label x:Name="Btn_GetNew" Text="GET NEW!" FontSize="10" FontAttributes="Bold" TextColor="White"/>
+                </StackLayout>
+
+                <StackLayout Padding="5" Orientation="Horizontal" HorizontalOptions="Center">
+                    <Label x:Name="Lbl_Create_Account" Text="DONT'T HAVE AN ACCOUNT?" FontSize="10" TextColor="White"/>
+                    <Label x:Name="Btn_SignUp" Text="SIGN UP!" FontSize="10" FontAttributes="Bold" TextColor="White"/>
+                </StackLayout>
+
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

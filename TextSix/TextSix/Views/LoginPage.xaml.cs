@@ -1,0 +1,51 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using TextSix.Models;
+using TextSix.Views.Menu;
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+
+namespace TextSix.Views
+{
+	[XamlCompilation(XamlCompilationOptions.Compile)]
+	public partial class LoginPage : ContentPage
+	{
+		public LoginPage ()
+		{
+			InitializeComponent ();
+            Init();
+		}
+
+        void Init()
+        {
+            Entry_Username.Completed += (s, e) => Entry_Password.Focus();
+            Entry_Password.Completed += (s, e) => SignInProcedure(s, e);
+        }
+
+        async void SignInProcedure(object sender, EventArgs e)
+        {
+            User user = new User(Entry_Username.Text, Entry_Password.Text);
+            if (user.CheckInFormation())
+            {
+                DisplayAlert("Login", "Login Success", "Oke");
+                //var result await App.RestService.Login(user);
+                var result = new Token();
+                if (this.Entry_Username != null && this.Entry_Password != null) 
+                
+                {
+                    //App.UserDatabase.SaveUser(user);
+                    //App.TokenDatabase.SaveToken(result);
+                    Application.Current.MainPage = new NavigationPage(new Dashboard());
+                }
+            }
+            else
+            {
+                DisplayAlert("Login", "Login Not Correct, empty username or password!", "Oke");
+            }
+        }
+            
+    }
+}

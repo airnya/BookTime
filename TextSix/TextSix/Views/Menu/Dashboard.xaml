@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TextSix.Views.Menu.Dashboard">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand">
+            <Label Text="Welcome" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+            <Button Text="Screen 1" Clicked="SelectedMainScreen" HorizontalOptions="Center"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
