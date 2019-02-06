@@ -30,7 +30,7 @@ namespace TextSix.Views
             User user = new User(Entry_Username.Text, Entry_Password.Text);
             if (user.CheckInFormation())
             {
-                DisplayAlert("Login", "Login Success", "Oke");
+                await DisplayAlert("Login", "Login Success", "Oke");
                 //var result await App.RestService.Login(user);
                 var result = new Token();
                 if (this.Entry_Username != null && this.Entry_Password != null) 
@@ -38,12 +38,12 @@ namespace TextSix.Views
                 {
                     //App.UserDatabase.SaveUser(user);
                     //App.TokenDatabase.SaveToken(result);
-                    Application.Current.MainPage = new NavigationPage(new Dashboard());
+                    Application.Current.MainPage = new MasterDetail();
                 }
             }
             else
             {
-                DisplayAlert("Login", "Login Not Correct, empty username or password!", "Oke");
+                await DisplayAlert("Login", "Login Not Correct, empty username or password!", "Oke");
             }
         }
             
