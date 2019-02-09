@@ -13,10 +13,10 @@ namespace TextSix.Views.Menu
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class MasterPage : ContentPage
 	{
-        public ListView ListView { get { return ListView; } }
+        public ListView ListView { get { return listview; } }
         public List<MasterMenuItem> items;
 
-		public MasterPage ()
+		public MasterPage()
 		{
 			InitializeComponent ();
             SetItems();
