@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TextSix.Models;
+using TextSix.Views;
 using TextSix.Views.DetailsViews;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;

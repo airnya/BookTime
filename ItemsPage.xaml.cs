@@ -8,14 +8,14 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using TextSix.Models;
 
-namespace TextSix.Views.DetailsViews
+namespace TextSix.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class InfoScreen : ContentPage
+    public partial class ItemsPage : ContentPage
     {
         ItemsViewModel viewModel;
 
-        public InfoScreen()
+        public ItemsPage()
         {
             InitializeComponent();
 

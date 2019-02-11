@@ -3,6 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TextSix.App">
     <Application.Resources>
-
+        <ResourceDictionary>
+            <!--Global Styles-->
+            <Color x:Key="NavigationPrimary">#2196F3</Color>
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="PaleVioletRed" />
+                <Setter Property="BarTextColor" Value="White" />
+            </Style>
+            <Style TargetType="Label" x:Key="Label_Bot">
+                <Setter Property="TextColor" Value="White" />
+            </Style>            
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
