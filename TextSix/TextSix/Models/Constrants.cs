@@ -7,6 +7,5 @@ namespace TextSix.Models
     public class Constrants
     {
         public static bool IsDev = true;
-        
     }
 }

@@ -13,4 +13,12 @@ namespace TextSix.Data
         Task<T> GetItemAsync(string id);
         Task<IEnumerable<T>> GetItemsAsync(bool forceRefresh = false);
     }
+    public interface IDataStoreCategory<T>
+    {
+        Task<bool> AddItemAsync(T category);
+        Task<bool> UpdateItemAsync(T category);
+        Task<bool> DeleteItemAsync(string id);
+        Task<T> GetItemAsync(string id);
+        Task<IEnumerable<T>> GetItemsAsync(bool forceRefresh = false);
+    }
 }

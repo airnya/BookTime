@@ -10,5 +10,12 @@ namespace TextSix.Models
         public string Text { get; set; }
         public string Description { get; set; }
     }
+
+    public class Category
+    {
+        public string Id { get; set; }
+        public string Text { get; set; }
+        public string Description { get; set; }
+    }
 }
 
