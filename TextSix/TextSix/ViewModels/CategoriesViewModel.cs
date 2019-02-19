@@ -17,7 +17,7 @@ namespace TextSix.ViewModels
 
         public CategoriesViewModel()
         {
-            Title = "Browse";
+            Title = "КАТЕГОРИИ КНИГ";
             Categories = new ObservableCollection<Category>();
             LoadCategoriesCommand = new Command(async () => await ExecuteLoadCategoriesCommand());
 

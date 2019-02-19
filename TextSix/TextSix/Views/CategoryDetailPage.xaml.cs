@@ -13,27 +13,38 @@ namespace TextSix.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CategoryDetailPage : ContentPage
     {
-        ItemDetailCategoryView viewModel;
+        ItemsViewModel viewModel;
 
-        public CategoryDetailPage(ItemDetailCategoryView viewModel)
+        public CategoryDetailPage(ItemDetailCategoryView itemDetailCategoryView)
         {
             InitializeComponent();
 
-            BindingContext = this.viewModel = viewModel;
+            BindingContext = viewModel = new ItemsViewModel();
         }
 
-        public CategoryDetailPage()
+        async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
         {
-            InitializeComponent();
+            var item = args.SelectedItem as Item;
+            if (item == null)
+                return;
 
-            var category = new Category
-            {
-                Text = "Category 1",
-                Description = "This is an item description."
-            };
+            await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(item)));
 
-            viewModel = new ItemDetailCategoryView(category);
-            BindingContext = viewModel;
+            // Manually deselect item.
+            ItemsListView.SelectedItem = null;
+        }
+
+        async void AddItem_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new NavigationPage(new NewItemPage()));
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            if (viewModel.Items.Count == 0)
+                viewModel.LoadItemsCommand.Execute(null);
         }
     }
 }
