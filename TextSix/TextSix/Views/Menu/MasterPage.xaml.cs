@@ -26,8 +26,8 @@ namespace TextSix.Views.Menu
         void SetItems()
         {
             items = new List<MasterMenuItem>();
-            items.Add(new MasterMenuItem("Infoscreen1", "icon.png", "Say Mother Fucker", Color.White, typeof(InfoScreen)));
-            items.Add(new MasterMenuItem("Infoscreen2", "icon.png", "Say Mother Fucker Fucker", Color.White, typeof(InfoScreen2)));
+            items.Add(new MasterMenuItem("Имя_Категории", "icon.png", "Автор?", Color.WhiteSmoke, typeof(InfoScreen)));
+            items.Add(new MasterMenuItem("Коллекция", "icon.png", "Авторы?", Color.WhiteSmoke, typeof(InfoScreen2)));
             ListView.ItemsSource = items;
         }
     }
