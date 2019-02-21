@@ -21,7 +21,7 @@ namespace TextSix.Views.Menu
         void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             var item = e.SelectedItem as MasterMenuItem;
-            if(item != null)
+            if (item != null)
             {
                 Detail = new NavigationPage((Page)Activator.CreateInstance(item.TargetType));
                 masterpage.ListView.SelectedItem = null;

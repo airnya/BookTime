@@ -20,8 +20,8 @@ namespace TextSix.Views
 
             Item = new Item
             {
-                Text = "Item name",
-                Description = "This is an item description."
+                Text = "",
+                Description = ""
             };
 
             BindingContext = this;

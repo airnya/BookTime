@@ -11,17 +11,17 @@ using Xamarin.Forms.Xaml;
 
 namespace TextSix.Views.Menu
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class MasterPage : ContentPage
-	{
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class MasterPage : ContentPage
+    {
         public ListView ListView { get { return listview; } }
         public List<MasterMenuItem> items;
 
-		public MasterPage()
-		{
-			InitializeComponent ();
+        public MasterPage()
+        {
+            InitializeComponent();
             SetItems();
-		}
+        }
 
         void SetItems()
         {

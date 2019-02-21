@@ -16,12 +16,9 @@ namespace TextSix.Data
             categories = new List<Category>();
             var mockItems = new List<Category>
             {
-                new Category { Id = Guid.NewGuid().ToString(), Text = "Sexitem", Description="This is an item description." },
-                new Category { Id = Guid.NewGuid().ToString(), Text = "Sexitem", Description="This is an item description." },
-                new Category { Id = Guid.NewGuid().ToString(), Text = "Sexitem", Description="This is an item description." },
-                new Category { Id = Guid.NewGuid().ToString(), Text = "item", Description="This is an item description." },
-                new Category { Id = Guid.NewGuid().ToString(), Text = "item", Description="This is an item description." },
-                new Category { Id = Guid.NewGuid().ToString(), Text = "item", Description="This is an item description." },
+                new Category { Id = Guid.NewGuid().ToString(), IconSource="space.png", Text = "Первая категория", Description="Описание первой категории." },
+                new Category { Id = Guid.NewGuid().ToString(), IconSource="rainbow.png", Text = "Вторая категория", Description="Описание второй категории." },
+                new Category { Id = Guid.NewGuid().ToString(), IconSource="globe.png", Text = "Третья категория", Description="Описание третьей категории." },
             };
 
             foreach (var category in mockItems)

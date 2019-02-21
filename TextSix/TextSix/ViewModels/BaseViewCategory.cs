@@ -11,7 +11,7 @@ namespace TextSix.ViewModels
 {
     public class BaseViewCategory : INotifyPropertyChanged
     {
-        public IDataStoreCategory<Category> DataStore => DependencyService.Get<IDataStoreCategory<Category>>() ?? new MockDataCategory();
+        public IDataStoreCategory<Category> DataStoreCategory => DependencyService.Get<IDataStoreCategory<Category>>() ?? new MockDataCategory();
 
         bool isBusy = false;
         public bool IsBusy

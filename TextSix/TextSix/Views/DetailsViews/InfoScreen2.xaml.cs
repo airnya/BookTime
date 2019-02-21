@@ -10,8 +10,8 @@ using TextSix.Models;
 
 namespace TextSix.Views.DetailsViews
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class InfoScreen2 : ContentPage
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class InfoScreen2 : ContentPage
     {
         CategoriesViewModel viewModel;
 

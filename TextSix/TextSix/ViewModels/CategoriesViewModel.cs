@@ -22,11 +22,11 @@ namespace TextSix.ViewModels
             LoadCategoriesCommand = new Command(async () => await ExecuteLoadCategoriesCommand());
 
             MessagingCenter.Subscribe<NewCategoryPage, Category>(this, "AddItem", async (obj, category) =>
-                {
-                    var newItem = category as Category;
-                    Categories.Add(newItem);
-                    await DataStore.AddItemAsync(newItem);
-                }
+            {
+                var newItem = category as Category;
+                Categories.Add(newItem);
+                await DataStoreCategory.AddItemAsync(newItem);
+            }
             );
         }
 
@@ -40,7 +40,7 @@ namespace TextSix.ViewModels
             try
             {
                 Categories.Clear();
-                var categories = await DataStore.GetItemsAsync(true);
+                var categories = await DataStoreCategory.GetItemsAsync(true);
                 foreach (var category in categories)
                 {
                     Categories.Add(category);

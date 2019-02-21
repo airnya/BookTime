@@ -3,18 +3,30 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TextSix.Views.LoginPage"
              BackgroundColor="PaleVioletRed">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="Login-Label" TargetType="Label">
+                <Setter Property="FontSize" Value="10"/>
+            </Style>
+            <Style x:Key="Login-Entry" TargetType="Entry">
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontSize" Value="15"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
     <ContentPage.Content>
         <StackLayout Padding="45">
 
-            <Label x:Name="ApplicationTitle" Text="LOGIN" HorizontalOptions="Center" TextColor="White"/>
+            <Label x:Name="ApplicationTitle" Text="LOGIN" HorizontalOptions="CenterAndExpand" TextColor="White" VerticalOptions="StartAndExpand"/>
             <Label x:Name="HelloMessage" Text="Здоров, чо как мужик?" TextColor="White" FontSize="40" VerticalTextAlignment="End"/>
 
 
             <StackLayout VerticalOptions="CenterAndExpand" Padding="5">
 
-                <Label x:Name="Lbl_Username" Text="Email" FontSize="10" TextColor="White"/>
+                <Label x:Name="Lbl_Username" Text="Email" Style="{StaticResource Login-Label}" />
                 <Entry x:Name="Entry_Username" Placeholder="Username" TextColor="White" Text="" />
-                <Label x:Name="Lbl_Password" Text="Password" TextColor="White"/>
+                <Label x:Name="Lbl_Password" Text="" Style="{StaticResource Login-Label}"/>
                 <Entry x:Name="Entry_Password" Placeholder="Password" TextColor="White" Text=""/>
                 <Button x:Name="Btn_SignIn" Text="LOG IN" TextColor="PaleVioletRed" Clicked="SignInProcedure" BackgroundColor="White" />
 
