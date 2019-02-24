@@ -18,6 +18,12 @@
     <Compile Update="Views\CategoryDetailPage.xaml.cs">
       <DependentUpon>CategoryDetailPage.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\NewCategoryPage - Copy %282%29.xaml.cs">
+      <DependentUpon>%(Filename)</DependentUpon>
+    </Compile>
+    <Compile Update="Views\NewCategoryPage - Copy.xaml.cs">
+      <DependentUpon>%(Filename)</DependentUpon>
+    </Compile>
     <Compile Update="Views\NewCategoryPage.xaml.cs">
       <DependentUpon>NewCategoryPage.xaml</DependentUpon>
     </Compile>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TextSix.Views.NewCategoryPage"
+             Title="ДОБАВЛЕНИЕ КАТЕГОРИИ">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Save" Clicked="Save_Clicked" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+
+        <StackLayout Spacing="20" Padding="15">
+            <Label Text="Название категории" FontSize="Medium" TextColor="PaleVioletRed"/>
+            <Entry Text="{Binding Category.Text}" FontSize="Small" />
+            <Label Text="Описание" FontSize="Medium" TextColor="PaleVioletRed"/>
+            <Editor Text="{Binding Category.Description}" FontSize="Small" Margin="0" />
+            <Button Text="Добавить категорию" Clicked="Save_Clicked" VerticalOptions="EndAndExpand" HeightRequest="60" TextColor="White" FontAttributes="Bold" BackgroundColor="PaleVioletRed"/>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
