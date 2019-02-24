@@ -1,27 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="TextSix.Views.NewItemPage"
-             Title="ДОБАВЛЕНИЕ КНИГИ"
-             BackgroundColor="WhiteSmoke">
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Save" Clicked="Save_Clicked" />
-    </ContentPage.ToolbarItems>
-    <ContentPage.Content>
-        <StackLayout Spacing="20" Padding="15" >
-            <Label Text="Название книги" TextColor="PaleVioletRed" Margin="10,0,0,0"/>
-            <Frame BackgroundColor="White" CornerRadius="6">
-                <Entry Text="{Binding Item.Text}"/>
-            </Frame>
-            <Label Text="Автор книги" TextColor="PaleVioletRed" Margin="10,0,0,0"/>
-            <Frame BackgroundColor="White" CornerRadius="6">
-                <Editor Text="{Binding Item.Description}"/>
-            </Frame>
-            <Label Text="Дополнительно" TextColor="PaleVioletRed" Margin="10,0,0,0"/>
-            <Frame BackgroundColor="White" CornerRadius="6">
-                <Editor />
-            </Frame>
-            <Button Text="ДОБАВИТЬ В БИБЛИОТЕКУ" Clicked="Save_Clicked" VerticalOptions="EndAndExpand" HeightRequest="50" TextColor="White" FontAttributes="Bold" BackgroundColor="PaleVioletRed"/>
-        </StackLayout>
-    </ContentPage.Content>
-</ContentPage>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:views="clr-namespace:TextSix.Views"
+            x:Class="TextSix.Views.NewItemPage"
+            BackgroundColor="WhiteSmoke">
+    <TabbedPage.Children>
+        <NavigationPage Title="Поиск" Icon="">
+            <x:Arguments>
+                <views:AboutPage />
+            </x:Arguments>
+        </NavigationPage>
+
+        <NavigationPage Title="Редактирование">
+            <!--<NavigationPage.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android" Value="icon.png"/>
+                </OnPlatform>
+            </NavigationPage.Icon> -->
+            <x:Arguments>
+                <views:NewItemSearch />
+            </x:Arguments>
+        </NavigationPage>
+
+        <NavigationPage Title="Добавлено!">
+            <x:Arguments>
+                <views:NewItemAdded />
+            </x:Arguments>
+        </NavigationPage>     
+        
+    </TabbedPage.Children>
+</TabbedPage>

@@ -10,27 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace TextSix.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class NewItemPage : ContentPage
+    public partial class NewItemPage : TabbedPage
     {
-        public Item Item { get; set; }
-
         public NewItemPage()
         {
             InitializeComponent();
-
-            Item = new Item
-            {
-                Text = "",
-                Description = ""
-            };
-
-            BindingContext = this;
-        }
-
-        async void Save_Clicked(object sender, EventArgs e)
-        {
-            MessagingCenter.Send(this, "AddItem", Item);
-            await Navigation.PopModalAsync();
         }
     }
 }

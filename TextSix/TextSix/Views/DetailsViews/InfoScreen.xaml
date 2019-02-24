@@ -7,7 +7,7 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="ListItemTextStyle" TargetType="Label">
-                <Setter Property="TextColor" Value="PaleVioletRed"/>
+                <Setter Property="TextColor" Value="#FF6681"/>
                 <Setter Property="FontSize" Value="20"/>
             </Style>
             <Style x:Key="ListItemDetailTextStyle" TargetType="Label">

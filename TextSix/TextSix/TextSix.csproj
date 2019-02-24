@@ -18,19 +18,22 @@
     <Compile Update="Views\CategoryDetailPage.xaml.cs">
       <DependentUpon>CategoryDetailPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\NewCategoryPage - Copy %282%29.xaml.cs">
-      <DependentUpon>%(Filename)</DependentUpon>
-    </Compile>
-    <Compile Update="Views\NewCategoryPage - Copy.xaml.cs">
-      <DependentUpon>%(Filename)</DependentUpon>
-    </Compile>
     <Compile Update="Views\NewCategoryPage.xaml.cs">
       <DependentUpon>NewCategoryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\NewItemAdded.xaml.cs">
+      <DependentUpon>NewItemAdded.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\NewItemSearch.xaml.cs">
+      <DependentUpon>NewItemSearch.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Update="Views\AboutPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\DetailsViews\AddBook.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\DetailsViews\InfoScreen.xaml">

@@ -7,7 +7,7 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="ListItemTextStyle" TargetType="Label">
-                <Setter Property="TextColor" Value="PaleVioletRed"/>
+                <Setter Property="TextColor" Value="#FF6681"/>
                 <Setter Property="FontSize" Value="20"/>
             </Style>
             <Style x:Key="ListItemDetailTextStyle" TargetType="Label">
@@ -18,7 +18,7 @@
     </ContentPage.Resources>
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Add" Icon="icon_add.png" Clicked="AddItem_Clicked" />
+        <ToolbarItem Text="Add" Icon="icon_add_folder.png" Clicked="AddItem_Clicked" />
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content>

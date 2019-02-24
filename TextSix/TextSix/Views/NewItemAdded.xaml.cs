@@ -4,21 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TextSix.Models;
+using TextSix.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace TextSix.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class NewCategoryPage : ContentPage
+    public partial class NewItemAdded : ContentPage
     {
-        public Category Category { get; set; }
+        public Item Item { get; set; }
 
-        public NewCategoryPage()
+        public NewItemAdded()
         {
             InitializeComponent();
 
-            Category = new Category
+            Item = new Item
             {
                 Text = "",
                 Description = ""
@@ -29,7 +30,7 @@ namespace TextSix.Views
 
         async void Save_Clicked(object sender, EventArgs e)
         {
-            MessagingCenter.Send(this, "AddItem", Category);
+            MessagingCenter.Send(this, "AddItem", Item);
             await Navigation.PopModalAsync();
         }
     }

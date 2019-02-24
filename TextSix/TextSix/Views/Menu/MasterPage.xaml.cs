@@ -28,6 +28,8 @@ namespace TextSix.Views.Menu
             items = new List<MasterMenuItem>();
             items.Add(new MasterMenuItem("Имя_Категории", "icon.png", "Автор?", Color.WhiteSmoke, typeof(InfoScreen)));
             items.Add(new MasterMenuItem("Коллекция", "icon.png", "Авторы?", Color.WhiteSmoke, typeof(InfoScreen2)));
+            items.Add(new MasterMenuItem("Добавить книгу", "icon.png", "", Color.WhiteSmoke, typeof(NewItemPage)));
+
             ListView.ItemsSource = items;
         }
     }

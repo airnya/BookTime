@@ -5,14 +5,19 @@
     <Application.Resources>
         <ResourceDictionary>
             <!--Global Styles-->
-            <Color x:Key="NavigationPrimary">#2196F3</Color>
+            <Color x:Key="NavigationPrimary">#FF6681</Color>
             <Style TargetType="NavigationPage">
-                <Setter Property="BarBackgroundColor" Value="PaleVioletRed" />
+                <Setter Property="BarBackgroundColor" Value="#FF6681" />
                 <Setter Property="BarTextColor" Value="White" />
             </Style>
             <Style TargetType="Label" x:Key="Label_Bot">
                 <Setter Property="TextColor" Value="White" />
-            </Style>            
+            </Style>
+            <Style TargetType="Label" x:Key="Label_Bot">
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+            public Xamarin.Forms.Color BarBackgroundColor { get; set; }
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>
