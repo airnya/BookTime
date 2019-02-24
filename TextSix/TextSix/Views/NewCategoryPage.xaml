@@ -13,7 +13,7 @@
             <Entry Text="{Binding Category.Text}" FontSize="Small" />
             <Label Text="Описание" FontSize="Medium" TextColor="PaleVioletRed"/>
             <Editor Text="{Binding Category.Description}" FontSize="Small" Margin="0" />
-            <Button Text="Добавить категорию" Clicked="Save_Clicked" VerticalOptions="EndAndExpand" HeightRequest="100" TextColor="White" FontAttributes="Bold" BackgroundColor="PaleVioletRed"/>
+            <Button Text="Добавить категорию" Clicked="Save_Clicked" VerticalOptions="EndAndExpand" HeightRequest="60" TextColor="White" FontAttributes="Bold" BackgroundColor="PaleVioletRed"/>
         </StackLayout>
 
     </ContentPage.Content>

@@ -22,7 +22,7 @@
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content>
-
+        
         <StackLayout Padding="10" BackgroundColor="WhiteSmoke">
             <ListView x:Name="CategoriesListView" 
                 ItemsSource="{Binding Categories}"
@@ -41,7 +41,7 @@
                                 <Grid  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
                                     <!--RowSpacing="1" ColumnSpacing="1"-->
                                     <Grid.RowDefinitions>
-                                        <RowDefinition Height="100" />
+                                        <RowDefinition Height="80" />
                                         <RowDefinition Height="*" />
                                     </Grid.RowDefinitions>
                                     <Grid.ColumnDefinitions>
@@ -52,11 +52,9 @@
 
                                     <StackLayout Grid.Column="1" VerticalOptions="CenterAndExpand">
                                         <Label Text="{Binding Text}" 
-                                            LineBreakMode="NoWrap" 
-                                            Style="{StaticResource ListItemTextStyle}"/>
+                                            LineBreakMode="NoWrap" />
                                         <Label Text="{Binding Description}" 
-                                            LineBreakMode="NoWrap"
-                                            Style="{StaticResource ListItemDetailTextStyle}"/>
+                                            LineBreakMode="NoWrap"/>
                                     </StackLayout>
                                     <ImageButton Source="more.png"  Grid.Column="2" BackgroundColor="White" HorizontalOptions="EndAndExpand" HeightRequest="40" />
                                 </Grid>

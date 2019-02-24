@@ -4,13 +4,19 @@
              x:Class="TextSix.Views.CategoryDetailPage"
              Title="{Binding Title}"
              x:Name="BrowseCategoriesPage">
-    <!--    <StackLayout Spacing="20" Padding="15">
-        <Label Text="Text:" FontSize="Medium" />
-        <Label Text="{Binding Category.Text}" FontSize="Small"/>
-        <Label Text="Description:" FontSize="Medium" />
-        <Label Text="{Binding Category.Description}" FontSize="Small"/>
-    </StackLayout>
--->
+    <ContentPage.Resources>
+    <ResourceDictionary>
+        <Style x:Key="ListItemTextStyle" TargetType="Label">
+            <Setter Property="TextColor" Value="PaleVioletRed"/>
+            <Setter Property="FontSize" Value="20"/>
+        </Style>
+        <Style x:Key="ListItemDetailTextStyle" TargetType="Label">
+            <Setter Property="TextColor" Value="LightGray"/>
+            <Setter Property="FontSize" Value="15"/>
+        </Style>
+    </ResourceDictionary>
+    </ContentPage.Resources> 
+
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Add" Icon="icon_add.png" Clicked="AddItem_Clicked" />
     </ContentPage.ToolbarItems>
@@ -24,19 +30,31 @@
                  IsPullToRefreshEnabled="true"
                  IsRefreshing="{Binding IsBusy, Mode=OneWay}"
                  CachingStrategy="RecycleElement"
-                 ItemSelected="OnItemSelected">
+                 ItemSelected="OnItemSelected"
+                 SeparatorVisibility="None">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <StackLayout Padding="10" BackgroundColor="White" Margin="5,5,5,5">
-                                <Label Text="{Binding Text}" 
-                       LineBreakMode="NoWrap" 
-                       Style="{DynamicResource ListItemTextStyle}" 
-                       FontSize="16" />
-                                <Label Text="{Binding Description}" 
-                       LineBreakMode="NoWrap"
-                       Style="{DynamicResource ListItemDetailTextStyle}"
-                       FontSize="13" />
+                            <StackLayout BackgroundColor="White" Padding="5, 1" Margin="5">
+                                <Grid  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                                    <!--RowSpacing="1" ColumnSpacing="1"-->
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="100" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="100" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Image Grid.Column="0" Grid.RowSpan="2" Source="{Binding BookCover}" Margin="10"/>
+
+                                    <StackLayout Grid.Column="1" VerticalOptions="CenterAndExpand">
+                                        <Label Text="{Binding Text}" 
+                                            LineBreakMode="NoWrap" />
+                                        <Label Text="{Binding Description}" 
+                                            LineBreakMode="NoWrap"/>
+                                    </StackLayout>
+                                </Grid>
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>

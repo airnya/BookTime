@@ -16,12 +16,14 @@ namespace TextSix.Data
             items = new List<Item>();
             var mockItems = new List<Item>
             {
-                new Item { Id = Guid.NewGuid().ToString(), Text = "First item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Second item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Third item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Fourth item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Fifth item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Sixth item", Description="This is an item description." },
+                new Item { Id = Guid.NewGuid().ToString(), BookCover="BookCover/book_one.jpg", Text = "Первая книга", Description="This is an item description." },
+                new Item { Id = Guid.NewGuid().ToString(), BookCover="book_one.jpg", Text = "Вторая книга", Description="This is an item description." },
+                new Item { Id = Guid.NewGuid().ToString(), BookCover="BookCover/book_three.jpg", Text = "Third item", Description="This is an item description." },
+                new Item { Id = Guid.NewGuid().ToString(), BookCover="space.png", Text = "Третья книга", Description="This is an item description." },
+                new Item { Id = Guid.NewGuid().ToString(), BookCover="BookCover/book_one.jpg", Text = "Первая книга", Description="This is an item description." },
+                new Item { Id = Guid.NewGuid().ToString(), BookCover="book_one.jpg", Text = "Вторая книга", Description="This is an item description." },
+                new Item { Id = Guid.NewGuid().ToString(), BookCover="BookCover/book_three.jpg", Text = "Third item", Description="This is an item description." },
+                new Item { Id = Guid.NewGuid().ToString(), BookCover="space.png", Text = "Третья книга", Description="This is an item description." },
             };
 
             foreach (var item in mockItems)
