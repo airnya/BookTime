@@ -13,11 +13,6 @@
             <Style TargetType="Label" x:Key="Label_Bot">
                 <Setter Property="TextColor" Value="White" />
             </Style>
-            <Style TargetType="Label" x:Key="Label_Bot">
-                <Setter Property="TextColor" Value="White" />
-            </Style>
-            public Xamarin.Forms.Color BarBackgroundColor { get; set; }
-
         </ResourceDictionary>
     </Application.Resources>
 </Application>

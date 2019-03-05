@@ -18,12 +18,13 @@
     </ContentPage.Resources>
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Add" Icon="icon_add_folder.png" Clicked="AddItem_Clicked" />
+        <ToolbarItem Text="Add" Icon="plus.png" Clicked="AddItem_Clicked" />
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content>
         
         <StackLayout Padding="10" BackgroundColor="WhiteSmoke">
+            <SearchBar x:Name="sb_search" Placeholder="Search"/>
             <ListView x:Name="CategoriesListView" 
                 ItemsSource="{Binding Categories}"
                 VerticalOptions="FillAndExpand"

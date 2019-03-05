@@ -14,11 +14,12 @@ namespace TextSix.Views.DetailsViews
     public partial class InfoScreen2 : ContentPage
     {
         CategoriesViewModel viewModel;
+        List<Category> Items;
 
         public InfoScreen2()
         {
             InitializeComponent();
-
+            InitSearchBar();
             BindingContext = viewModel = new CategoriesViewModel();
         }
 
@@ -45,6 +46,26 @@ namespace TextSix.Views.DetailsViews
 
             if (viewModel.Categories.Count == 0)
                 viewModel.LoadCategoriesCommand.Execute(null);
+        }
+
+        void InitSearchBar()
+        {
+            sb_search.TextChanged += (s, e) => FilterItem(sb_search.Text);
+            sb_search.SearchButtonPressed += (s, e) => FilterItem(sb_search.Text);
+        }
+
+        private void FilterItem(string filter)
+        {
+            CategoriesListView.BeginRefresh();
+            if (string.IsNullOrWhiteSpace(filter))
+            {
+                CategoriesListView.ItemsSource = Items;
+            }
+            else
+            {
+                CategoriesListView.ItemsSource = Items.Where(x => x.Text.ToLower().Contains(filter.ToLower()));
+            }
+            CategoriesListView.EndRefresh();
         }
     }
 }
